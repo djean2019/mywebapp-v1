@@ -9,17 +9,21 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.project.darphe.mywebapp.model.UserComment;
+import com.project.darphe.mywebapp.model.UserLike;
 import com.project.darphe.mywebapp.service.UserCommentService;
+import com.project.darphe.mywebapp.service.UserLikeService;
 
 @Controller
 @RequestMapping("darphejean")
 public class MyAppController {
 
 	private UserCommentService commentService;
+	private UserLikeService likeService;
 	
 	@Autowired
-	public MyAppController(UserCommentService commentService) {
+	public MyAppController(UserCommentService commentService, UserLikeService likeService) {
 		this.commentService = commentService;
+		this.likeService = likeService;
 	}
 	
 	@GetMapping("/home")
@@ -33,7 +37,7 @@ public class MyAppController {
 		  
 		return "darphejean/darphe-resume";
 	}
-	
+
 	@GetMapping("/userComments")
 	public String displayComments(Model model) {
 		
@@ -41,5 +45,14 @@ public class MyAppController {
 		model.addAttribute("comments",theComments);
 		
 		return "darphejean/user-comments";
+	}
+
+	@GetMapping("/userLikes")
+	public String displayLikes(Model model) {
+		
+		List<UserLike> theLikes = likeService.getAll();
+		model.addAttribute("likes",theLikes);
+		
+		return "darphejean/user-likes";
 	}
 }

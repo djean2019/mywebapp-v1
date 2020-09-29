@@ -21,7 +21,7 @@ public class UserCommentServiceImpl implements UserCommentService {
 	
 	@Override
 	public void save(UserComment comment) {
-
+		commentRepository.save(comment);
 	}
 
 	@Override
