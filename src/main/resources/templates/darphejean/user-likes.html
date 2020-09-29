@@ -24,7 +24,7 @@
 		<hr>
 	
 	<!-- Add a button -->
-	<a th:href="@{/darphe/likeForm}"
+	<a th:href="@{/darphejean/likeform}"
 		class="btn btn-primary btn-sm mb-3">
 		Give a like
 	</a>
@@ -48,15 +48,15 @@
 				
 				<!-- Add update button/link -->
 				<!-- <td>
-				 	<a th:href="@{/employees/showFormForUpdate(employeeId=${tempEmployee.id})}"
+				 	<a th:href="@{/darphejean/showFormForUpdate(likeId=${theLike.id})}"
 				 		class="btn btn-info btn-sm">
 				 		Update
 				 	</a>
 				
 					Add update button/link
-				 	<a th:href="@{/employees/delete(employeeId=${tempEmployee.id})}"
+				 	<a th:href="@{/darphejean/delete(likeId=${theLike.id})}"
 				 		class="btn btn-danger btn-sm"
-				 		onclick="if (!(confirm('Are you sure you want to delete this employee?'))) return false">
+				 		onclick="if (!(confirm('Are you sure you want to delete your like?'))) return false">
 				 		Delete
 				 	</a>
 				</td> -->

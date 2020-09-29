@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.project.darphe.mywebapp.model.UserComment;
@@ -28,7 +30,7 @@ public class MyAppController {
 	
 	@GetMapping("/home")
 	public String displayHome() {
-		  
+		   
 		return "darphejean/darphe-welcome";
 	}
 	
@@ -38,7 +40,7 @@ public class MyAppController {
 		return "darphejean/darphe-resume";
 	}
 
-	@GetMapping("/userComments")
+	@GetMapping("/usercomments")
 	public String displayComments(Model model) {
 		
 		List<UserComment> theComments = commentService.getAll();
@@ -47,12 +49,46 @@ public class MyAppController {
 		return "darphejean/user-comments";
 	}
 
-	@GetMapping("/userLikes")
+	@GetMapping("/userlikes")
 	public String displayLikes(Model model) {
 		
 		List<UserLike> theLikes = likeService.getAll();
 		model.addAttribute("likes",theLikes);
 		
 		return "darphejean/user-likes";
+	}
+
+	@GetMapping("/likeform")
+	public String showLikeForm(Model model) {
+		
+		UserLike userLike = new UserLike();
+		model.addAttribute("like",userLike);
+		
+		return "darphejean/form-like";
+	}
+	
+	@GetMapping("/commentform")
+	public String showCommentForm(Model model) {
+		
+		UserComment userComment = new UserComment();
+		model.addAttribute("comment",userComment);
+		
+		return "darphejean/form-comment";
+	}
+
+	@PostMapping("/savelike")
+	public String saveLike(@ModelAttribute("like") UserLike userLike) {
+		
+		likeService.save(userLike);
+		
+		return "redirect:/darphejean/userlikes";
+	}
+
+	@PostMapping("/savecomment")
+	public String saveComment(@ModelAttribute("comment") UserComment userComment) {
+		
+		commentService.save(userComment);
+		
+		return "redirect:/darphejean/usercomments";
 	}
 }
