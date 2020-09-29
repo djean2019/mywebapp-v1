@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:layout="http:www.ultraq.net.nz/thymeleaf/layout"
+				layout:decorate="~{darphe/comments}">
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+  <link rel="stylesheet" type="text/css" th:href="@{/css/master.css}">
+<title>Darphe Home Page</title>
+</head>
+
+<body>
+	
+	
+	<div th:replace="fragments/header :: header"></div>
+	
+	<div class="container" layout:fragment="content">
+		<h1 class="hea">Welcome to Darphe's web site</h1> <br>
+		<img style="float:left;margin-right:1em;" alt="Darhyppo" th:src="@{/images/DJ.jpg}" width="20%">
+		<h5>Who is Darphe?</h5>
+		<p class="paraf">
+			Born in Saint-Louis du Nord, in the Northwestern department of Haiti, Darphé received his 
+			primary education at the Jean Jacques Dessalines National School in his hometown. He was 
+			introduced to music from a very young age. After his 7th grade at Lycée Jean Marie de 
+			Lamennais in Saint-Louis du Nord, he went to Port-au-Prince to continue his classical 
+			studies at Lycée Pierre Eustache Daniel Fignolé. After completing his classical studies, 
+			he was forced to return to Saint-Louis du Nord following the socio-political unrest in the 
+			country. He took advantage of this time to write a book titled "Plural Distraction" which 
+			will have pleased the majority of young Nordlouisiens.
+		</p>
+		<h5>His University Studies</h5>
+		<p class="paraf">In 2006, he returned to Port-au-Prince again to begin his university studies at the Institut
+		   Universitaire Quisqueya-Amérique (INUQUA), computer science option. Being passionate about 
+		   mathematics, a year later he enrolled at the State University of Haiti where he passed the 
+		   entrance examination to the École Normale Supérieure. He had to redouble his efforts to be 
+		   able to maintain university studies in two different faculties because almost all his days 
+		   were dedicated to his studies.
+		</p>
+		<p class="paraf">In 2019, he went to the USA for a Masters in Computer Science at Maharishi International University.</p>
+		
+		<h5>Hobbies</h5>
+		<p class="paraf">His favorite hobbies are of course: programming more precisely java, music, dancing, and 
+		   sometimes cinema.
+		</p>
+		
+		<h5>Professional experiences</h5>
+		<p class="paraf">To know much more about his professional experiences, please refer to the "resume" section
+		   of the menu or you can send him an email to the address: darphejean@gmail.com.
+		</p><br>
+		
+		<h5><i>Notes:</i></h5>
+		<p class="paraf">Darphé wants to improve his page, he is counting on you to achieve it. Please leave a 
+		   <a href="/darphejean/commentForm">comment</a> and/or a <a href="/darphejean/likeForm">like.</a> You
+		   can view all the <a href="/darphejean/comments">comments</a> and/or <a href="/darphejean/likes">likes</a> by 
+		   accessing the <a href="/darphejean/comments">Comments</a> and/or <a href="/darphejean/likes">Likes/Unlikes</a> sections.
+		 </p>
+	</div>
+	<br><br>
+	
+	<div th:replace="fragments/footer :: footer"></div>
+	
+</body>
+</html>
