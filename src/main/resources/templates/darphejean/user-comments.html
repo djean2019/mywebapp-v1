@@ -34,8 +34,12 @@
 		<ul>
 			<li th:each="comment: ${comments}" th:text = "${comment.userName} + ' says:  ' + ${comment.message}" > </li> 
 		</ul>
+		<hr>
+		<br>
+	
+		<a th:href="@{/darphe/home}">Back to Home Page</a>
+	
 	</div>
-	<a th:href="@{/darphe/home}">Back to Home Page</a>
 	<br><br>
 	<div th:replace="fragments/footer :: footer"></div>
 	
