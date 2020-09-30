@@ -42,21 +42,26 @@ public class MyAppController {
 
 	@GetMapping("/comments/list")
 	public String displayComments(Model model) {
-		
+		List<UserComment> theComments=null;
 		try{
-			List<UserComment> theComments = commentService.getAll();
-			model.addAttribute("comments",theComments);
+			theComments = commentService.getAll();
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		
+		model.addAttribute("comments",theComments);
 		return "darphejean/user-comment";
 	}
 
 	@GetMapping("/likes/list")
 	public String displayLikes(Model model) {
 		
-		List<UserLike> theLikes = likeService.getAll();
+		List<UserLike> theLikes=null;
+		try{
+			theLikes = likeService.getAll();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		model.addAttribute("likes",theLikes);
 		
 		return "darphejean/user-like";
