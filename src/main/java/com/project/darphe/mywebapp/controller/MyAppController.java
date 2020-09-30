@@ -94,7 +94,7 @@ public class MyAppController {
 			e.printStackTrace();
 		}
 		
-		return "redirect:/darphejean/userlikes";
+		return "redirect:/darphejean/likes/list";
 	}
 
 	@PostMapping("/savecomment")
