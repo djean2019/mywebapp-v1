@@ -1,4 +1,3 @@
-yml config
 spring:  
   application:
     name: darphewebapp

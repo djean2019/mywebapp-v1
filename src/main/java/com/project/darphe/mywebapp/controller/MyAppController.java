@@ -40,7 +40,7 @@ public class MyAppController {
 		return "darphejean/darphe-resume";
 	}
 
-	@GetMapping("/comments")
+	@GetMapping("/usercomments")
 	public String displayComments(Model model) {
 		
 		List<UserComment> theComments = commentService.getAll();
@@ -49,13 +49,13 @@ public class MyAppController {
 		return "darphejean/user-comments";
 	}
 
-	@GetMapping("/likes")
+	@GetMapping("/userlikes")
 	public String displayLikes(Model model) {
 		
 		List<UserLike> theLikes = likeService.getAll();
 		model.addAttribute("likes",theLikes);
 		
-		return "darphejean/user-likes";
+		return "darphejean/form-like";
 	}
 
 	@GetMapping("/likeform")
