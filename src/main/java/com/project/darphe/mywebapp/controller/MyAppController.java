@@ -88,7 +88,11 @@ public class MyAppController {
 	@PostMapping("/savelike")
 	public String saveLike(@ModelAttribute("like") UserLike userLike) {
 		
-		likeService.save(userLike);
+		try{
+			likeService.save(userLike);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		
 		return "redirect:/darphejean/userlikes";
 	}
