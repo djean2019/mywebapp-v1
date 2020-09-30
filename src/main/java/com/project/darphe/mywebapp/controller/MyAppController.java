@@ -46,7 +46,7 @@ public class MyAppController {
 		List<UserComment> theComments = commentService.getAll();
 		model.addAttribute("comments",theComments);
 		
-		return "darphejean/user-comment";
+		return "darphejean/darphe-resume";
 	}
 
 	@GetMapping("/likes/list")
