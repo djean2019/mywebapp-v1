@@ -43,10 +43,14 @@ public class MyAppController {
 	@GetMapping("/comments/list")
 	public String displayComments(Model model) {
 		
-		List<UserComment> theComments = commentService.getAll();
-		model.addAttribute("comments",theComments);
+		try{
+			List<UserComment> theComments = commentService.getAll();
+			model.addAttribute("comments",theComments);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		
-		return "darphejean/darphe-resume";
+		return "darphejean/user-comment";
 	}
 
 	@GetMapping("/likes/list")
