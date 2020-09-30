@@ -42,14 +42,12 @@ public class MyAppController {
 
 	@GetMapping("/comments/list")
 	public String displayComments(Model model) {
-		List<UserComment> theComments=null;
 		try{
-			theComments = commentService.getAll();
-			
+			List<UserComment> theComments = commentService.getAll();
+			model.addAttribute("comments",theComments);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		model.addAttribute("comments",theComments);
 		return "darphejean/user-comment";
 	}
 
@@ -102,6 +100,6 @@ public class MyAppController {
 		
 		commentService.save(userComment);
 		
-		return "redirect:/darphejean/usercomments";
+		return "redirect:/darphejean/comments/list";
 	}
 }

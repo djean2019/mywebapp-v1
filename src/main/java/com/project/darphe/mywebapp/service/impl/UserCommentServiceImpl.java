@@ -1,5 +1,6 @@
 package com.project.darphe.mywebapp.service.impl;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,11 @@ public class UserCommentServiceImpl implements UserCommentService {
 	
 	@Override
 	public void save(UserComment comment) {
-		commentRepository.save(comment);
+		try{
+			commentRepository.save(comment);
+		} catch(RuntimeException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
