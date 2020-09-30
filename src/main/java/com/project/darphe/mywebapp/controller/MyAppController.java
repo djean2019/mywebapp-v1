@@ -46,7 +46,7 @@ public class MyAppController {
 		List<UserComment> theComments = commentService.getAll();
 		model.addAttribute("comments",theComments);
 		
-		return "darphejean/ucomments";
+		return "darphejean/user-comment";
 	}
 
 	@GetMapping("/likes/list")
@@ -55,7 +55,7 @@ public class MyAppController {
 		List<UserLike> theLikes = likeService.getAll();
 		model.addAttribute("likes",theLikes);
 		
-		return "darphejean/ucomments";
+		return "darphejean/user-like";
 	}
 
 	@GetMapping("/likeform")
