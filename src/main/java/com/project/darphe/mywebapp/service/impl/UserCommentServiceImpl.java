@@ -31,13 +31,11 @@ public class UserCommentServiceImpl implements UserCommentService {
 
 	@Override
 	public UserComment getById(int theId) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public void deleteById(int theId) {
-		// TODO Auto-generated method stub
 
 	}
 
