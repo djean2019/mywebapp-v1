@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:layout="http:www.ultraq.net.nz/thymeleaf/layout"
+				layout:decorate="~{darphe/comments}">
+<head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+  <link rel="stylesheet" type="text/css" th:href="@{/css/master.css}">
+<title>Darphe Home Page</title>
+</head>
+
+<body>
+	
+	
+	<div th:replace="fragments/french-header :: header"></div>
+	
+	<div class="container" layout:fragment="content">
+		<h1 class="hea">Bienvenue au site web de Darphe</h1> <br>
+		<img style="float:left;margin-right:1em;" alt="Darhyppo" th:src="@{/images/DJ.jpg}" width="20%">
+		<h5>Qui est Darphe?</h5>
+		<p class="paraf">
+			Né à Saint-Louis du Nord, dans le département du Nord’Ouest d’Haïti, Darphé a fait 
+			ses études primaires à l’École Nationale Jean Jacques Dessalines de sa ville natale. 
+			Il s’est initié dans la musique depuis tout petit. Après sa classe 7e Année 
+			Fondamentale au Lycée Lamennais de Saint-Louis du Nord, il est rentré à Port-au-Prince 
+			pour poursuivre ses études classiques au Lycée Pierre Eustache Daniel Fignolé. Après 
+			avoir bouclé ses études classiques, il est obligé de retourner à Saint-Louis du Nord 
+			suite aux troubles socio-politiques qu’a connu le pays. Il profitait de ce temps pour 
+			écrie un bouquin titré « Distraction plurielle » qui aura plu la majorité des jeunes 
+			Nordlouisiens.
+		</p>
+		<h5>Ses Etudes Universitaires</h5>
+		<p class="paraf">
+			En 2006, il est rentré à nouveau à Port-au-Prince pour entamer ses études universitaires 
+			à l’Institut Universitaire Quisqueya-Amérique (INUQUA), option Sciences Informatiques. 
+			Étant un passionné des mathématiques, un an plus tard, il s’est fait inscrire à l’Université 
+			d’État d’Haïti où il a réussi le concours d’admission à l’École Normale Supérieure. 
+			Il a dû se redoubler d’effort pour pouvoir maintenir des études universitaires dans deux 
+			différentes facultés car presque toutes ses journées étaient dédiées à ses études.
+			
+		</p>
+		<p class="paraf">
+			En 2019, il est rentré aux USA pour une maitrise en Sciences Informatiques à Maharishi International University.
+		</p>
+		
+		<h5>Passe-temps</h5>
+		<p class="paraf">
+			Ses passe-temps préférés sont bien sûr : la programmation plus précisément java, la musique, 
+			la danse, et parfois le cinéma.
+		</p>
+		
+		<h5>Expériences Professionnelles</h5>
+		<p class="paraf">
+			Pour savoir beaucoup plus sur ses expériences professionnelles, s’il vous plait, référer vous au rubrique 
+			"<a href="/darphejean/resume">CV</a>" du menu ou vous pouvez bien lui envoyez un courrier électronique à 
+			l’adresse : darphejean@gmail.com.
+		</p><br>
+		
+		<h5><i>Notes:</i></h5>
+		<p class="paraf">
+			Darphé veut bien améliorer sa page, il compte bien sur vous pour en arriver. Veuillez laisser un 
+		   <a href="/darphejean/commentform">Commentaire</a> et/ou un <a href="/darphejean/likeform">J'aime.</a> Vous pouvez voir
+		   tous les <a href="/darphejean/comments/list">commentaires</a> et/ou <a href="/darphejean/likes/list">J'aimes</a> en 
+		   accedant la section <a href="/darphejean/comments/list">Commentaires</a> et/ou <a href="/darphejean/likes/list">J'aime/J'aime pas</a>.
+		 </p>
+	</div>
+	<br><br>
+	
+	<div th:replace="fragments/footer :: footer"></div>
+	
+</body>
+</html>
