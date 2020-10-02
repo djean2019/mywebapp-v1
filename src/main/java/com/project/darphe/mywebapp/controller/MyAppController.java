@@ -104,8 +104,11 @@ public class MyAppController {
 	@PostMapping("/savecomment")
 	public String saveComment(@ModelAttribute("comment") UserComment userComment) {
 		
-		commentService.save(userComment);
-		
+		try{
+			commentService.save(userComment);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		return "redirect:/darphejean/comments/list";
 	}
 }
