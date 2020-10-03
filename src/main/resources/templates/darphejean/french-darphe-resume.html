@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http:www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{darphe/likes}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" th:href="@{/css/master.css}">
+<title>Resume</title>
+</head>
+<body>
+
+
+	<div th:replace="fragments/french-header :: header"></div>
+
+	<div class="container" layout:fragment="content">
+		
+		<div class="parcenter">
+			<h6><a class="nav-item" href="/darphejean/resume">[ANG]</a></h6>
+			<h5>DARPHÉ JEAN</h5>
+			<h5>3505 SW 52 Ave, apt 104 • Pembroke Park, FL 33023</h5>
+			<h5>
+				641-819-1075 • darphejean@gmail.com • <a
+					href="https://www.linkedin.com/in/darphe-jean">https://www.linkedin.com/in/darphe-jean</a>
+			</h5>
+		</div>
+
+		<hr>
+		<h5 class="parcenter">DEVELOPPEUR JAVA</h5>
+
+		<p class="paraf">Developpeur Professionnel Java Backend motivé avec une formation 
+			approfondie et plus de 4 ans d'expérience dans l'industrie dans les domaines des 
+			technologies de l'information et de l'informatique. Historique de la mise en œuvre 
+			réussie du front-end et du back-end de projets académiques utilisant des 
+			technologies telles que Java, Spring Boot, MySQL, Hibernate, NodeJS, MongoDB et 
+			RESTful Web Services. Un joueur d'équipe organisé et analytique avec de solides 
+			compétences dans les pratiques de programmation modernes et les techniques de 
+			programmation.
+		</p>
+
+		<p class="parcenter">Software Application Development • Programmmation Java • 
+			Structures de Données • SDLC • POO Composants Front-End & Back-End
+			 • Test & Troubleshooting • Manipulation de Donnée • Algorithmes
+		</p>
+
+		<ul class="ul-nobullet">
+			<li>Languages: Java</li>
+			<li>Web: HTML, CSS, JavaScript, Thymeleaf, JSON, GSON, AJAX,
+				Bootstrap</li>
+			<li>Web Services: RESTful</li>
+			<li>Serveurs d'App. Web: Tomcat, Apache</li>
+			<li>Frameworks: Spring (Web MVC, Boot), Hibernate, JPA, NodeJS,
+				Angular, Mongoose</li>
+			<li>Bade de Données: MySQL, MongoDB</li>
+			<li>Modèles de conception: Singleton, Factory</li>
+			<li>SDLC: RUP, Agile/SCRUM</li>
+			<li>Outils: Eclipse, NetBeans, Notepad++, IntelliJ, Spring Tool
+				Suite, Visual Studio Code, JUnit, Project Lombock, Git, JCreator, MS
+				Visio, StarUML, Maven, Postman, Swagger</li>
+			<li>Plateformes: Windows, Mac OS</li>
+		</ul>
+		<br>
+		NOTE DE CARRIERE: Completé les études sur le campus avec un GPA de 3.54 et
+		en train de suivre actuellement des cours à distance pour compléter sa Maitrise
+		en Science Informatique (Displonible pour emploi à temps-plein, W-2).
+
+		<hr>
+		
+
+		<p class="parcenter">
+			<h5 class="parcenter"><b>EDUCATION</b></h5>
+			<br> 
+			<b>Maitrise en Sciences Informatique</b> <br> 
+			(en cours via éducation à distance; achèvement prévu juin 2022) 
+			<br> Maharishi International University – Fairfield, Iowa <br> <br> 
+			<b>Cours clés:</b> Practique de Programmation 
+			Fundamental; Practique de Programmation Moderne; Génie Logiciel; 
+			Programmation d'Application Web; Architecture d'Enterprise ; Modern Web Application<br>
+			<br> 
+			<b>Licence en Science Informatique</b> (2011)<br>
+			Institut Universitaire Quisqueya Amerique – Port-au-Prince, Haiti<br>
+			<br>
+			<b>Certificat de Mathématiques</b> (2010)<br>
+			Universite d'Etat d'Haiti (2010)
+			
+			<b>Administration Economique et Sociale</b> (2019)<br>
+			Ecole de Droit et des Sciences Economiques
+		</p>
+		<hr><br>
+
+		<h5 class="parcenter"> <b>PROJECTS ACADEMIQUES</b> </h5> <br> 
+		<b>TM Checker, MIU (2020): </b>
+			Conçu et développé une API Backend qui offre la possibilité à un étudiant MIU de faire une réservation 
+			pour la vérification TM, l'instructeur peut accepter un étudiant par rendez-vous.
+		<ul>
+			<li>Conception du Modèle de domaine.</li>
+			<li>Assurer l'achèvement des tâches allouées à chaque membre de l'équipe.</li>
+			<li>Fourni les codes de démarrage en couches et planifié l'attribution de tâches à d'autres membres.</li>
+			<li>Implémentation des opérations CRUD pour le cas d'utilisation de Rendez-vous.</li>
+		</ul>
+		<b><u>Technologies utilisées:</u></b> Java, STS, Maven, Spring Boot, REST, Tomcat, MySQL, Postman, StarUML, Git, GitHub.<br><br>
+		 
+		<b>Online Market, MIU (2020):</b>
+			Conception et développement d'un projet permettant aux vendeurs de publier 
+			des produits, à l'administrateur système d'approuver et aux clients d'acheter 
+			les produits répertoriés.
+		<ul>
+			<li>Ecrit tout le code back-end à partir de zéro.</li>
+			<li>Assuré l'authentification et validation des utilisateurs</li>
+		</ul>
+		<b><u>Technologies utilisées:</u></b> NodeJS, CSS, VS Code, Angular, MongoDB, Mongoose, Git, GitHub <br><br>
+		 
+		<b>eClinic, MIU (2020):</b> Développement d'un système clinique en ligne qui permet aux 
+			patients de prendre des rendez-vous en ligne pour des problèmes spécifiques avec les 
+			médecins disponibles.
+		<ul>
+			<li>Implémentation du code de rendez-vous et de réservation (effectué par les patients) à l'aide de Java.</li>
+			<li>Test de la logique, côté serveur, avec Postman et conception du modèle de domaine avec StarUML.</li>
+			<li>Intégration de JDBC pour la connectivité avec la base de données MySQL.</li>
+		</ul>
+		<b><u>Technologies utilisées:</u></b> Java, Eclipse, Servlets, HTML, CSS,
+		JavaScript, AJAX, jQuery, VS Code, Servlets, Tomcat, MySQL, GSON,
+		JDBC, Postman, StarUML, Git, Bootstrap <br><br>
+		 
+		<b>eShopping, MIU (2020):</b> 
+			Conception et développement d'un système d'achat en ligne permettant l'achat de produits.
+		<ul>
+			<li>Conception du Modèle de domaine.</li>
+			<li>Assurer l'achèvement des tâches allouées à chaque membre de l'équipe.</li>
+			<li>Implementation des operations CRUD pour les modules uitilisateur, shopping-cart.</li>
+		</ul>
+		
+		<b><u>Technologies utilisées:</u></b> Java, STS, Maven, Spring Boot,
+		Thymeleaf, Angular, RESTful web services, HTML, CSS, Tomcat, MySQL,
+		Postman, StarUML, Git, GitHub. <br> <br> 
+		
+		<h5 class="parcenter"><b>PROJECTS PROFESSIONNELS</b></h5> <br>
+		
+		<b>SYGACP, Académie Chrétienne Primitive (2018):</b> Mise en œuvre d'une application Web interne à l'école qui 
+			gère toutes les informations des élèves.
+		<ul>
+			<li>Conception du modèle de domaine.</li>
+			<li>Développer des opérations CRUD pour les modèles utilisateurs et étudiants.</li>
+			<li>Rédiger et fournir la documentation de l'application.</li>
+		</ul>
+		<b><u>Technologies utilisées:</u></b> Java, Eclipse, Spring boot, Maven,
+		Restful, Tomcat, MySQL, MS Visio, Postman, Thymeleaf, HTML, CSS. 
+		<hr><br>
+		
+		<h5 class="parcenter"><b>PREVIOUS PROFESSIONAL EXPERIENCE</b></h5> <br>
+		<b>ACADÉMIE CHRÉTIENNE PRIMITIVE, Saint-Louis du Nord, Haiti • 2016-2019</b><br>
+		Private school from preschool to 10th grade.<br> 
+		<b>Directeur Pedagogic & TI</b> 
+		Géré tous les aspects du programme de technologie de l'information de l'école.
+		<ul>
+			<li>Création d'applications logicielles à usage interne.</li>
+			<li>Entretien des matériels informatiques, logiciels et équipements associés.</li>
+			<li>Plannification des approches et contenus pédagogiques.</li>
+		</ul>
+		<br>
+		
+		<b>DIRECTION GÉNÉRALE DES IMPÔTS, Port-au-Prince, Haiti • 2016-2019</b><br>
+		Administration publique gouvernementale qui collecte les impôts.<br>
+		
+		<b>Opérateur de saisie informatique / Inspecteur</b>
+		Collection, vérification et maintenance des données d'immatriculation des personnes physiques, et des véhicules.<br>
+		<ul>
+			<li>Entré des données confidentielles et sensibles avec précision et rapidité.</li>
+			<li>Préparé des reçus financiers et fiscaux compliqués.</li>
+			<li>Identification des problèmes potentiels d'intégrité des données et recommandations de solutions proactives.</li>
+		</ul>
+			
+		<br> 
+		<b>JELDNET AND SERVICES, Port-au-Prince, Haiti • 2013-2014</b><br> 
+		Une société liée à l'informatique qui a fourni des services logiciels et matériels <br>
+		<b>Ingénieur Java</b><br> 
+		Conception et mise en œuvre de codes java pour le système de gestion des stocks de l'entreprise<br>
+		
+		<ul>
+			<li>Colection des besoins de l'utilisateur.</li>
+			<li>Plannification des réunions planifiées avec les autres membres de l'équipe pour 
+			discuter de l'avancement du projet et s'assurer que nous répondons aux exigences des clients.</li>
+			<li>Conception des diagrammes et descriptions de cas d'utilisation, et implémentation de codes Java.</li>
+		</ul>
+		<br>
+		<b>SOGEBANK S.A., Port-au-Prince, Haiti • 2011-2016</b> <br>
+		Banque Commerciale <br><b>Caissier</b>
+		<ul>
+			<li>Promotion de produits ou de services auprès de chaque client pour atteindre 
+			    systématiquement les objectifs de vente.</li>
+			<li>Comptage d'argent très précis et volumineux effectué via des approches manuelles.</li>
+		</ul>
+		<br>
+
+	</div>
+
+	<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

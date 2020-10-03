@@ -32,7 +32,7 @@
 			<input type="hidden" th:field="*{id}" />
 			
 			<input type="text" th:field="*{userName}"
-					class="form-control mb-4 col-4" placeholder="*Your name please"  required>
+					class="form-control mb-4 col-4" placeholder="Your name please">
 			
 			<select class="form-control mb-4 col-4" th:field="*{status}">
 			    <option th:value="Like" th:text="Like"></option>
@@ -40,7 +40,7 @@
 			</select>
 			
 			<input type="text" th:field="*{description}"
-					class="form-control mb-4 col-4" placeholder="Why (optional)?">
+					class="form-control mb-4 col-4" placeholder="Why?">
 					
 			<button type="submit" class="btn btn-info col-2">Ok</button>
 			

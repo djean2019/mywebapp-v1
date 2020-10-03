@@ -3,8 +3,6 @@ spring:
     name: darphewebapp
   datasource:
     url: jdbc:postgresql://localhost:5432/darphedb
-#  url: >-
-#    postgres://uibnnvsoealdkh:aa21217c86348ed9048eac35fd9127b7d8e6aa2f67935c252a6860f4f6658d17@ec2-54-156-121-142.compute-1.amazonaws.com:5432/dek0k73gosues6
 #    username: darphehyppolitejean
 #    password: root2019
 #    driverClassName: org.postgresql.Driver

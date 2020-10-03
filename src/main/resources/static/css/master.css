@@ -29,7 +29,9 @@ body {
 .paraf {
 	text-align: justify;
 }
-
+h6{
+	text-align: center;
+}
 .parcenter {
 	text-align: center;
 }

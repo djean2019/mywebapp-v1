@@ -34,12 +34,6 @@ public class MyAppController {
 		return "darphejean/darphe-welcome";
 	}
 	
-	@GetMapping("/acceuil")
-	public String displayAccueil() {
-		   
-		return "darphejean/french-darphe-welcome";
-	}
-	
 	@GetMapping("/resume")
 	public String displayResume() {
 		  

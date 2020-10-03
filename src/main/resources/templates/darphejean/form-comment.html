@@ -33,10 +33,10 @@
 			<input type="hidden" th:field="*{id}" />
 			
 			<input type="text" th:field="*{userName}"
-					class="form-control mb-4 col-4" placeholder="Your name please">
+					class="form-control mb-4 col-4" placeholder="*Your name please" required>
 			
  			<textarea  rows = "8" cols = "100" th:field="*{message}"
-					 placeholder="Type your message here">
+					 placeholder="Type your message here" required>
 			</textarea>
 			<br>		
 			<button type="submit" class="btn btn-info col-2">Send</button>

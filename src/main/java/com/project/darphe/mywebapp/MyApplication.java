@@ -1,12 +1,7 @@
 package com.project.darphe.mywebapp;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-
-import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class MyApplication {

@@ -13,36 +13,33 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  
     <link rel="stylesheet" type="text/css" th:href="@{/css/master.css}">
-	<title>Create Like</title>
+  
+	<title>Create Comment</title>
 </head>
 <body>
 	
 	<div th:replace="fragments/header :: header"></div>
 	
 	<div class="container">
-		<h3 style="text-align:center">You can choose like or unlike in the drop box</h3>
+		<h3 style="text-align:center">Please, send me a comment here.</h3>
 		<hr>
 		
-		<p class ="h4 mb-4">Create like</p>
+		<p class ="h4 mb-4">Create Comment</p>
 		
-		<form action="#" th:action="@{/darphejean/savelike}"
-						 th:object="${like}" method="POST">
+		<form action="#" th:action="@{/darphejean/savecomment}"
+						 th:object="${comment}" method="POST">
 						 
 			<!-- Add hidden form field to handle update -->
 			<input type="hidden" th:field="*{id}" />
 			
 			<input type="text" th:field="*{userName}"
-					class="form-control mb-4 col-4" placeholder="*Your name please"  required>
+					class="form-control mb-4 col-4" placeholder="Your name please">
 			
-			<select class="form-control mb-4 col-4" th:field="*{status}">
-			    <option th:value="Like" th:text="Like"></option>
-			    <option th:value="Unlike" th:text="Unlike"></option>
-			</select>
-			
-			<input type="text" th:field="*{description}"
-					class="form-control mb-4 col-4" placeholder="Why (optional)?">
-					
-			<button type="submit" class="btn btn-info col-2">Ok</button>
+ 			<textarea  rows = "8" cols = "100" th:field="*{message}"
+					 placeholder="Type your message here">
+			</textarea>
+			<br>		
+			<button type="submit" class="btn btn-info col-2">Send</button>
 			
 		</form>
 		
