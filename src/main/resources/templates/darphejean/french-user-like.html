@@ -12,29 +12,29 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  
   <link rel="stylesheet" type="text/css" th:href="@{/css/master.css}">
-<title>Likes</title>
+<title>Jaimes</title>
 </head>
 <body>
 	
 	
-	<div th:replace="fragments/header :: header"></div>
+	<div th:replace="fragments/french-header :: header"></div>
 	
 	<div class="container" layout:fragment="content">
-		<h6><a class="nav-item" href="/darphejean/jaimes/list">[FR]</a></h6>
-		<h1 class="hea">Thank you for your likes. :)</h1>
+		<h6><a class="nav-item" href="/darphejean/likes/list">[ANG]</a></h6>
+		<h1 class="hea">Merci pour vos j'aimes. :)</h1>
 		<hr>
 	
 	<!-- Add a button -->
-	<a th:href="@{/darphejean/likeform}"
+	<a th:href="@{/darphejean/formjaime}"
 		class="btn btn-primary btn-sm mb-3">
-		Give a like
+		Donnez un J'aime
 	</a>
 	
 	<table class="table table-bordered table-striped">
 		<thead class="thead-dark">
 			<tr>
 				<th scope="col">#</th>
-				<th>Name</th>
+				<th>Nom</th>
 				<th>Support</th>
 				<th>Description</th>
 			</tr>
@@ -67,7 +67,7 @@
 		
 	</div>
 	<br><br>
-	<div th:replace="fragments/footer :: footer"></div>
+	<div th:replace="fragments/french-footer :: footer"></div>
 	
 </body>
 </html>

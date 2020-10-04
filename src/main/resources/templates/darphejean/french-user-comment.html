@@ -13,42 +13,37 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  
     <link rel="stylesheet" type="text/css" th:href="@{/css/master.css}">
-  
-	<title>Créer Commentaire</title>
+	<title>Commentaires</title>
 </head>
 <body>
+	
 	
 	<div th:replace="fragments/french-header :: header"></div>
 	
 	<div class="container">
-		<h6><a class="nav-item" href="/darphejean/commentform">[ANG]</a></h6>
-		<h3 style="text-align:center">Veuillez envoyer votre commentaire ici.</h3>
+		<h6><a class="nav-item" href="/darphejean/comments/list">[ANG]</a></h6>
+		<h1 class="hea">Merci pour vos commentaires. :)</h1>
 		<hr>
 		
-		<p class ="h4 mb-4">Créer Commentaire</p>
-		
-		<form action="#" th:action="@{/darphejean/savecommentaire}"
-						 th:object="${comment}" method="POST">
-						 
-			<!-- Add hidden form field to handle update -->
-			<input type="hidden" th:field="*{id}" />
-			
-			<input type="text" th:field="*{userName}"
-					class="form-control mb-4 col-4" placeholder="Votre nom s'il vous plait">
-			
- 			<textarea  rows = "8" cols = "100" th:field="*{message}"
-					 placeholder="Ecrivez votre message ici">
-			</textarea>
-			<br>		
-			<button type="submit" class="btn btn-info col-2">Envoyer</button>
-			
-		</form>
+		<!-- Add a button -->
+		<a th:href="@{/darphejean/formcommentaire}"
+			class="btn btn-primary btn-sm mb-3">
+			Faites un Commentaire
+		</a>
 		
 		<hr>
+		
+		<ul>
+			<li th:each="comment: ${comments}" th:text = "${comment.userName} + ' dit:  ' + ${comment.message}" > </li> 
+		</ul>
+		<hr>
+		<br>
+	
 		<a th:href="@{/darphejean/accueil}">Retour à la Page d'Acceuil</a>
+	
 	</div>
 	<br><br>
-	
 	<div th:replace="fragments/french-footer :: footer"></div>
+	
 </body>
 </html>

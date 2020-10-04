@@ -13,44 +13,45 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  
     <link rel="stylesheet" type="text/css" th:href="@{/css/master.css}">
-	<title>Create Like</title>
+	<title>Créer J'aime</title>
 </head>
 <body>
 	
-	<div th:replace="fragments/header :: header"></div>
+	<div th:replace="fragments/french-header :: header"></div>
 	
 	<div class="container">
-		<h3 style="text-align:center">You can choose like or unlike in the drop box</h3>
+		<h6><a class="nav-item" href="/darphejean/likeform">[ANG]</a></h6>
+		<h3 style="text-align:center">Vous pouvez choisir J'aime ou J'aime pas dans la boite de défilement.</h3>
 		<hr>
 		
-		<p class ="h4 mb-4">Create like</p>
+		<p class ="h4 mb-4">Créer J'aime</p>
 		
-		<form action="#" th:action="@{/darphejean/savelike}"
+		<form action="#" th:action="@{/darphejean/savejaime}"
 						 th:object="${like}" method="POST">
 						 
 			<!-- Add hidden form field to handle update -->
 			<input type="hidden" th:field="*{id}" />
 			
 			<input type="text" th:field="*{userName}"
-					class="form-control mb-4 col-4" placeholder="Your name please">
+					class="form-control mb-4 col-4" placeholder="Votre nom s'il vous plait">
 			
 			<select class="form-control mb-4 col-4" th:field="*{status}">
-			    <option th:value="Like" th:text="Like"></option>
-			    <option th:value="Unlike" th:text="Unlike"></option>
+			    <option th:value="Jaime" th:text="Jaime"></option>
+			    <option th:value="Jaime-pas" th:text="Jaime-pas"></option>
 			</select>
 			
 			<input type="text" th:field="*{description}"
-					class="form-control mb-4 col-4" placeholder="Why?">
+					class="form-control mb-4 col-4" placeholder="Pourquoi? (Optionnel)">
 					
 			<button type="submit" class="btn btn-info col-2">Ok</button>
 			
 		</form>
 		
 		<hr>
-		<a th:href="@{/darphejean/home}">Back to Home Page</a>
+		<a th:href="@{/darphejean/accueil}">Retour à la Page d'Accueil</a>
 	</div>
 	<br><br>
 	
-	<div th:replace="fragments/footer :: footer"></div>
+	<div th:replace="fragments/french-footer :: footer"></div>
 </body>
 </html>
