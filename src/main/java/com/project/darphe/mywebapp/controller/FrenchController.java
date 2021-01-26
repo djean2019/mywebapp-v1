@@ -36,7 +36,7 @@ public class FrenchController {
 	 
 	@GetMapping("/cv")
 	public String displayResumel() {
-		return "darphejean/french-darphe-resume";
+		return "darphejean/darphe-resume";
 	}
 	
 	@GetMapping("/commentaires/list")
