@@ -2,6 +2,7 @@ package com.project.darphe.mywebapp.service.impl;
 
 import java.util.List;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,14 +11,10 @@ import com.project.darphe.mywebapp.repository.UserCommentRepository;
 import com.project.darphe.mywebapp.service.UserCommentService;
 
 @Service
+@RequiredArgsConstructor
 public class UserCommentServiceImpl implements UserCommentService {
 
-	private UserCommentRepository commentRepository;
-	
-	@Autowired
-	public UserCommentServiceImpl(UserCommentRepository commentRepository) {
-		this.commentRepository = commentRepository;
-	}
+	private final UserCommentRepository commentRepository;
 	
 	@Override
 	public void save(UserComment comment) {
